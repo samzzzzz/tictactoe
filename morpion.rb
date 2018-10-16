@@ -19,13 +19,13 @@ name2 = gets.chomp
 
 while (i != 1 || turn != 10)
 
-  puts "choissez un chiffre entre 1 et 9"
-  print">"
-  x = gets.chomp
-  x = x.to_i
-  x = x - 1
-
   if turn % 2 == 0
+    puts name1 + " Ou voulez vous jouez? Choissez un chiffre entre 1 et 9."
+    print">"
+    x = gets.chomp
+    x = x.to_i
+    x = x - 1
+
     if board[x] == " "
       puts name1 + " a joué"
       board[x] = "X"
@@ -33,97 +33,45 @@ while (i != 1 || turn != 10)
         if board[0] == "X" && board[1] == "X" && board[2] == "X"
           puts "Vous avez gagnez"
           i = 1
-          turn = 9 + 1
-          puts "Voulez vous rejou? Y/N"
-          replay= gets.chomp
-          	if replay == "Y"
-              board = [" "," "," "," "," "," "," "," "," "]
-              turn = 0
-              i = 0
-            end
         end
         if board[3] == "X" && board[4] == "X" && board[5] == "X"
           puts "Vous avez gagnez"
           i = 1
-          puts "Voulez vous rejou? Y/N"
-          replay= gets.chomp
-          	if replay == "Y"
-              board = [" "," "," "," "," "," "," "," "," "]
-              turn = 0
-              i = 0
-            end
         end
           if board[6] == "X" && board[7] == "X" && board[8] == "X"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
           end
           if board[0] == "X" && board[3] == "X" && board[6] == "X"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
           end
           if board[1] == "X" && board[4] == "X" && board[7] == "X"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
           end
           if board[2] == "X" && board[5] == "X" && board[8] == "X"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
           end
           if board[0] == "X" && board[4] == "X" && board[8] == "X"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
           end
           if board[2] == "X" && board[4] == "X" && board[6] == "X"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
           end
         else
           puts "mauvaise case"
           turn = turn - 1
         end
   else
+    puts name2 + " Ou voulez vous jouez? Choissez un chiffre entre 1 et 9."
+    print">"
+    x = gets.chomp
+    x = x.to_i
+    x = x - 1
     if board[x] == " "
         puts name2 + " a joué"
         board[x] = "O"
@@ -131,89 +79,34 @@ while (i != 1 || turn != 10)
         if board[0] == "O" && board[1] == "O" && board[2] == "O"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
           end
           if board[3] == "O" && board[4] == "O" && board[5] == "O"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
           end
           if board[6] == "O" && board[7] == "O" && board[8] == "O"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
           end
           if board[0] == "O" && board[3] == "O" && board[6] == "O"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
           end
           if board[1] == "O" && board[4] == "O" && board[7] == "O"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
           end
           if board[2] == "O" && board[5] == "O" && board[8] == "O"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
           end
           if board[0] == "O" && board[4] == "O" && board[8] == "O"
             puts "Vous avez gagnez"
             i = 1
-            puts "Voulez vous rejou? Y/N"
-            replay= gets.chomp
-            	if replay == "Y"
-                board = [" "," "," "," "," "," "," "," "," "]
-                turn = 0
-                i = 0
-              end
-
           end
           if board[2] == "O" && board[4] == "O" && board[6] == "O"
             puts "Vous avez gagnez"
             i = 1
-            if replay == "Y"
-              board = [" "," "," "," "," "," "," "," "," "]
-              turn = 0
-              i = 0
-            end
           end
         else
           puts "mauvaise case"
@@ -223,9 +116,9 @@ end
 turn = turn + 1
 if turn == 9
   i = 1
-  turn = turn + 1
+  turn = 10
   puts "égalite, tout est remplit"
-  puts "Voulez vous rejou? Y/N"
+  puts "Voulez ? Y/N"
   replay= gets.chomp
   	if replay == "Y"
       board = [" "," "," "," "," "," "," "," "," "]
@@ -233,5 +126,4 @@ if turn == 9
       i = 0
     end
 end
-
 end
